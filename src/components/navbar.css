@@ -1,0 +1,24 @@
+.nav-wrapper  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    flex-direction: row;
+  }
+  
+  .nav-wrapper li{
+    display: inline;
+  }
+
+  .nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .navbar a:hover {
+    color: lightgray;
+  }
+  

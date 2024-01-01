@@ -1,15 +1,18 @@
 import React from 'react';
-
-function sendVote() {
-  fetch('/api/vote')
-    .then(response => response.json())
-    .then(json => alert(json.text));
-}
-
+import { BrowserRouter , Routes, Route } from "react-router-dom";
+import "./components/navbar.css";
+import Home from './pages/home.js';
+import NavBar from './components/navbar.js';
 function App() {
   return (
+    
     <div className="App">
-      <button onClick={sendVote}>Vote</button>
+      <BrowserRouter>
+      <NavBar/> 
+      <Routes>
+        <Route path='/' exact element={<Home/>} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
