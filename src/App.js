@@ -11,8 +11,8 @@ function App() {
       <NavBar/> 
       <Routes>
         <Route path='/' exact element={<Home/>} />
-        <Route path='/login' element={<Navigate to="/.auth/login/aad"/>} />
-        <Route path='/logout' element={<Navigate to="/.auth/logout"/>} />
+        <Route path='/login' Component={ () =>{ window.location.href="/.auth/login/aad" }} />
+        <Route path='/logout' Component={ () =>{ window.location.href="/.auth/logout" }} />
       </Routes>
     </BrowserRouter>
     </div>
